@@ -7,7 +7,7 @@ body:
     attributes:
       value: |
         :warning: *This template is only intended for use by the developer team, if you are not part of the team you should use a [different template](
-          https://github.com/pokeclicker/pokeclicker/issues/new/choose
+          https://github.com/wheat32/pokeclicker/issues/new/choose
         )*
   - type: textarea
     attributes:
