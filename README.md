@@ -3,7 +3,7 @@
 
 # Fork Purpose
 
-The purpose of this fork is to enhance the base version. It will be kept up-to-date with the base repoisotory as much as possible.
+The purpose of this fork is to enhance the base version. It will be kept up-to-date with the base repository as much as possible.
 
 ## List of Changes
 - You can automatically sell dug up items in the Underground.
