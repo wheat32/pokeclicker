@@ -300,6 +300,7 @@ export class UndergroundHelper {
             allowedEnergyRestores: this._allowedEnergyRestores(),
             shouldDiscoverFavorite: this._shouldDiscoverFavorite(),
             retainedItems: ko.toJS(this._trackedStolenItems),
+            autoSell: this.autoSell,
         };
     }
 
@@ -309,6 +310,7 @@ export class UndergroundHelper {
         this._timeSinceWork(json?.timeSinceWork || 0);
         this._allowedEnergyRestores(json?.allowedEnergyRestores ?? []);
         this._shouldDiscoverFavorite(json?.shouldDiscoverFavorite ?? false);
+        this.autoSell = json.autoSell ?? false;
         Object.keys(this._trackedStolenItems).forEach(value => {
             this._trackedStolenItems[value](json?.retainedItems?.[value] ?? 0);
         });
