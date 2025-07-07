@@ -1,19 +1,22 @@
 [![GitHub package.json version (branch)](https://img.shields.io/github/package-json/v/wheat32/pokeclicker/develop?label=dev%20version)](https://github.com/wheat32/pokeclicker/tree/develop)<br/>
 [![GitHub package.json version (branch)](https://img.shields.io/github/package-json/v/wheat32/pokeclicker/master?label=live%20version)](https://www.pokeclickerplatinum.com/)<br/>
 
+# PokéClicker Platinum
+A game about catching Pokémon, defeating gym leaders, and watching numbers get bigger.
+
 # Fork Purpose
 
 The purpose of this fork is to enhance the base version. It will be kept up-to-date with the base repository as much as possible.
+
+Upstream may take code from this fork if it is useful to the base game.
 
 ## List of Changes
 - You can automatically sell dug up items in the Underground.
 - Experts in the Underground can automatically sell dug up items.
 - Experts in the Underground have a decreasing chance to destroy exposed items using a bomb.
 
+Try Platinum at https://www.pokeclickerplatinum.com/
 Try the original at https://www.pokeclicker.com/
-
-# PokéClicker
-A game about catching Pokémon, defeating gym leaders, and watching numbers get bigger.
 
 > [!NOTE]
 > PokéClicker is still in development!

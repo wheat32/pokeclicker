@@ -40,9 +40,9 @@
   },
   "homepage": "https://github.com/wheat32/pokeclicker#readme",
   "build": {
-    "appId": "com.pokeclicker.app",
+    "appId": "com.pokeclickerplatinum.app",
     "publish": null,
-    "productName": "PokeClicker",
+    "productName": "PokeClicker Platinum",
     "files": [
       "build/**/*",
       "main.mjs",
