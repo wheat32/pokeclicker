@@ -1,0 +1,45 @@
+name: Build AppImage and Portable Windows EXE
+
+on:
+  push:
+    branches: [master]
+
+jobs:
+  build-linux-and-windows:
+    runs-on: ubuntu-latest
+
+    steps:
+      - name: Checkout repository
+        uses: actions/checkout@v4
+
+      - name: Set up Node.js
+        uses: actions/setup-node@v4
+        with:
+          node-version: 20
+
+      - name: Install dependencies
+        run: npm ci
+
+      - name: Build project
+        run: npm run build
+
+      - name: Install Wine (for Windows build)
+        run: |
+          sudo dpkg --add-architecture i386
+          sudo apt update
+          sudo apt install -y wine64 wine32
+
+      - name: Build AppImage and Portable Windows EXE
+        run: npx electron-builder --linux AppImage --win portable
+
+      - name: Upload AppImage
+        uses: actions/upload-artifact@v4
+        with:
+          name: pokeclicker-appimage
+          path: release/*.AppImage
+
+      - name: Upload Portable Windows EXE
+        uses: actions/upload-artifact@v4
+        with:
+          name: pokeclicker-windows-portable
+          path: release/*.exe
