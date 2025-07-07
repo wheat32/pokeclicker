@@ -40,6 +40,7 @@
   "homepage": "https://github.com/wheat32/pokeclicker#readme",
   "build": {
     "appId": "com.pokeclicker.app",
+    "publish": null,
     "productName": "PokeClicker",
     "files": [
       "build/**/*",
@@ -54,7 +55,10 @@
     "linux": {
       "target": "AppImage",
       "category": "Game",
-      "icon": "src/assets/images/Pokeball.png"
+      "icon": "src/assets/images/Pokeball.png",
+      "maintainer": "wheat32",
+      "description": "PokéClicker Platinum – A clicker game for Pokémon fans.",
+      "synopsis": "A fan-made Pokémon clicker game built with Electron."
     }
   },
   "devDependencies": {
