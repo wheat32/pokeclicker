@@ -259,10 +259,9 @@ export class UndergroundController {
                     // Helper keeps the reward
                     helper.retainItem(item, amount);
                 } else {
+                    UndergroundController.gainMineItem(item.id, amount);
                     if (helper.autoSell) {
                         UndergroundController.sellMineItem(item, amount);
-                    } else {
-                        UndergroundController.gainMineItem(item.id, amount);
                     }
                 }
 

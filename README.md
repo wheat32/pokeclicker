@@ -15,7 +15,7 @@ Upstream may take code from this fork if it is useful to the base game.
 - Experts in the Underground can automatically sell dug up items.
 - Experts in the Underground have a decreasing chance to destroy exposed items using a bomb.
 
-Try Platinum at https://www.pokeclickerplatinum.com/
+Try Platinum at https://www.pokeclickerplatinum.com/  
 Try the original at https://www.pokeclicker.com/
 
 > [!NOTE]
