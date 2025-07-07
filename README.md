@@ -1,14 +1,14 @@
 [![GitHub package.json version (branch)](https://img.shields.io/github/package-json/v/pokeclicker/pokeclicker/develop?label=dev%20version)](https://github.com/pokeclicker/pokeclicker/tree/develop)<br/>
 [![GitHub package.json version (branch)](https://img.shields.io/github/package-json/v/pokeclicker/pokeclicker/master?label=live%20version)](https://www.pokeclicker.com/)<br/>
-[![Build Status](https://img.shields.io/travis/com/pokeclicker/pokeclicker?logo=travis)](https://travis-ci.com/pokeclicker/pokeclicker)<br/>
-[![Discord](https://img.shields.io/discord/450412847017754644?color=7289DA&label=Discord&logo=discord)](https://discord.gg/a6DFe4p)
+
+# Fork Purpose
+
+The purpose of this fork is to enhance the base version. It will be kept up-to-date with the base repoisotory as much as possible.
+
+Try the original at https://www.pokeclicker.com/
 
 # PokéClicker
 A game about catching Pokémon, defeating gym leaders, and watching numbers get bigger.
-
-You can try out the current state at https://www.pokeclicker.com/
-
-You can reach out on discord to discuss your ideas and how to implement them: https://discord.gg/a6DFe4p
 
 > [!NOTE]
 > PokéClicker is still in development!
