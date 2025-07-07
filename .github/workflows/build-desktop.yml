@@ -2,7 +2,7 @@ name: Build AppImage and Portable Windows EXE
 
 on:
   push:
-    branches: [master]
+    branches: [master, develop]
 
 jobs:
   build-linux-and-windows:
