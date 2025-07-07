@@ -25,6 +25,7 @@ import { UndergroundController } from '../UndergroundController';
 import Rand from '../../utilities/Rand';
 import UndergroundTool from '../tools/UndergroundTool';
 import UndergroundItem from '../UndergroundItem';
+import { BOMB_DESTROY_CHANCE_BASE, BOMB_DESTROY_CHANCE_DECREASE_PER_LEVEL } from '../../GameConstants';
 
 type UndergroundHelperParams = {
     id: string,
@@ -64,6 +65,8 @@ export class UndergroundHelper {
     private _trackedStolenItems: Record<600, Observable<number>> = {
         600: ko.observable(0),
     };
+
+    public autoSell: KnockoutObservable<boolean> = ko.observable(false);
 
     constructor(options: UndergroundHelperParams) {
         const {
@@ -281,6 +284,10 @@ export class UndergroundHelper {
         return this._workCycleTime();
     }
 
+    public get bombDestroyChance(): number {
+        return Math.max(0, BOMB_DESTROY_CHANCE_BASE - BOMB_DESTROY_CHANCE_DECREASE_PER_LEVEL * this.level);
+    }
+
     public toJSON(): Record<string, any> {
         return {
             id: this.id,
@@ -290,6 +297,7 @@ export class UndergroundHelper {
             allowedEnergyRestores: this._allowedEnergyRestores(),
             shouldDiscoverFavorite: this._shouldDiscoverFavorite(),
             retainedItems: ko.toJS(this._trackedStolenItems),
+            autoSell: this.autoSell,
         };
     }
 
@@ -299,6 +307,7 @@ export class UndergroundHelper {
         this._timeSinceWork(json?.timeSinceWork || 0);
         this._allowedEnergyRestores(json?.allowedEnergyRestores ?? []);
         this._shouldDiscoverFavorite(json?.shouldDiscoverFavorite ?? false);
+        this.autoSell = json.autoSell ?? false;
         Object.keys(this._trackedStolenItems).forEach(value => {
             this._trackedStolenItems[value](json?.retainedItems?.[value] ?? 0);
         });

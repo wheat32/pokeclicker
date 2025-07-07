@@ -1,14 +1,19 @@
-[![GitHub package.json version (branch)](https://img.shields.io/github/package-json/v/pokeclicker/pokeclicker/develop?label=dev%20version)](https://github.com/pokeclicker/pokeclicker/tree/develop)<br/>
-[![GitHub package.json version (branch)](https://img.shields.io/github/package-json/v/pokeclicker/pokeclicker/master?label=live%20version)](https://www.pokeclicker.com/)<br/>
-[![Build Status](https://img.shields.io/travis/com/pokeclicker/pokeclicker?logo=travis)](https://travis-ci.com/pokeclicker/pokeclicker)<br/>
-[![Discord](https://img.shields.io/discord/450412847017754644?color=7289DA&label=Discord&logo=discord)](https://discord.gg/a6DFe4p)
+[![GitHub package.json version (branch)](https://img.shields.io/github/package-json/v/wheat32/pokeclicker/develop?label=dev%20version)](https://github.com/wheat32/pokeclicker/tree/develop)<br/>
+[![GitHub package.json version (branch)](https://img.shields.io/github/package-json/v/wheat32/pokeclicker/master?label=live%20version)](https://www.pokeclickerplatinum.com/)<br/>
+
+# Fork Purpose
+
+The purpose of this fork is to enhance the base version. It will be kept up-to-date with the base repoisotory as much as possible.
+
+## List of Changes
+- You can automatically sell dug up items in the Underground.
+- Experts in the Underground can automatically sell dug up items.
+- Experts in the Underground have a decreasing chance to destroy exposed items using a bomb.
+
+Try the original at https://www.pokeclicker.com/
 
 # PokéClicker
 A game about catching Pokémon, defeating gym leaders, and watching numbers get bigger.
-
-You can try out the current state at https://www.pokeclicker.com/
-
-You can reach out on discord to discuss your ideas and how to implement them: https://discord.gg/a6DFe4p
 
 > [!NOTE]
 > PokéClicker is still in development!
@@ -17,7 +22,6 @@ You can reach out on discord to discuss your ideas and how to implement them: ht
 
 ## Guidelines
 - Make sure the build script is a success. We won't test Pull Requests that fail the building script.
-- We won't accept balance Pull Requests, unless it's from a developer or Code Contributor (Discord roles).
 - Pull Requests adding new translatable content should link to a Pull Request in the [translation repo](https://github.com/pokeclicker/pokeclicker-translations) adding your new strings. See the Developer instructions on that repo for more info.
 - Split Pull Requests into smaller Pull Requests when possible. It will make it easier for us to review, and easier for you if something's needs to be changed or is rejected.
 

@@ -10,6 +10,12 @@ import ChangelogUpdate from './ChangelogUpdate';
  */
 const ChangelogItems = [
     // note that month is 0 indexed
+    // v0.10.24-1
+    new ChangelogUpdate('v0.10.24-1', new Date(2025, 6, 7)),
+    new Changelog(changelogType.NEW, 'Underground: Added auto-sell option for dug up items'),
+    new Changelog(changelogType.NEW, 'Underground: Added auto-sell option for dug up items by experts'),
+    new Changelog(changelogType.CHANGE, 'Underground: Added bomb destroy chance for experts using bombs'),
+
     // v0.10.24
     new ChangelogUpdate('v0.10.24', new Date(2025, 6, 4)),
     new Changelog(changelogType.NEW, 'New Achievements'),

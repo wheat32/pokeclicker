@@ -1,8 +1,9 @@
 {
   "name": "pokeclicker",
-  "version": "0.10.24",
-  "description": "PokéClicker repository",
+  "version": "0.10.24-1",
+  "description": "PokéClicker Platinum repository",
   "main": "index.js",
+  "type": "module",
   "scripts": {
     "start": "cross-env NODE_ENV=development gulp",
     "build": "cross-env NODE_ENV=development gulp build",
@@ -22,7 +23,7 @@
   },
   "repository": {
     "type": "git",
-    "url": "git+https://github.com/pokeclicker/pokeclicker.git"
+    "url": "git+https://github.com/wheat32/pokeclicker.git"
   },
   "babel": {
     "presets": [
@@ -32,9 +33,9 @@
   "author": "RedSparr0w",
   "license": "ISC",
   "bugs": {
-    "url": "https://github.com/pokeclicker/pokeclicker/issues"
+    "url": "https://github.com/wheat32/pokeclicker/issues"
   },
-  "homepage": "https://github.com/pokeclicker/pokeclicker#readme",
+  "homepage": "https://github.com/wheat32/pokeclicker#readme",
   "devDependencies": {
     "@babel/core": "^7.0.0",
     "@babel/preset-env": "^7.0.0",

@@ -241,7 +241,13 @@ export class UndergroundController {
             GameHelper.incrementObservable(App.game.statistics.undergroundItemsFound, amount);
             GameHelper.incrementObservable(App.game.statistics.undergroundSpecificItemsFound[item.id], amount);
 
-            if (Rand.chance(App.game.underground.tools.getTool(toolType)?.itemDestroyChance ?? 0)) {
+            let destroyChance = App.game.underground.tools.getTool(toolType)?.itemDestroyChance ?? 0;
+
+            if (helper && toolType === UndergroundToolType.Bomb) {
+                destroyChance = Math.max(0, helper.bombDestroyChance);
+            }
+
+            if (Rand.chance(destroyChance)) {
                 UndergroundController.notifyItemDestroyed(item, amount, helper);
                 return;
             }
@@ -253,13 +259,22 @@ export class UndergroundController {
                     // Helper keeps the reward
                     helper.retainItem(item, amount);
                 } else {
-                    UndergroundController.gainMineItem(item.id, amount);
+                    if (helper.autoSell && helper.autoSell()) {
+                        UndergroundController.sellMineItem(item, amount);
+                    } else {
+                        UndergroundController.gainMineItem(item.id, amount);
+                    }
                 }
 
                 UndergroundController.addHiredHelperUndergroundExp(UNDERGROUND_EXPERIENCE_DIG_UP_ITEM, true);
             } else {
                 UndergroundController.gainMineItem(item.id, amount);
                 UndergroundController.addPlayerUndergroundExp(UNDERGROUND_EXPERIENCE_DIG_UP_ITEM, true);
+
+                // Auto-sell logic for manual digs
+                if (Settings.getSetting('undergroundTreasureAutoSellItems').observableValue()) {
+                    UndergroundController.sellMineItem(item, amount);
+                }
             }
         });
 
