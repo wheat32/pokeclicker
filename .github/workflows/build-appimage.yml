@@ -3,8 +3,6 @@ name: Build AppImage
 on:
   push:
     branches: [master]
-  pull_request:
-    branches: [master]
 
 jobs:
   build-linux-appimage:
