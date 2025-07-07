@@ -13,3 +13,4 @@ report.*.json
 docs/
 coverage/
 .stylelintcache
+release/
