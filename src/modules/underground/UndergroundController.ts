@@ -260,6 +260,8 @@ export class UndergroundController {
                     helper.retainItem(item, amount);
                 } else {
                     UndergroundController.gainMineItem(item.id, amount);
+
+                    // Helper sells the item if auto-sell is enabled
                     if (helper.autoSell) {
                         UndergroundController.sellMineItem(item, amount);
                     }
