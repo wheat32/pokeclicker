@@ -258,12 +258,10 @@ export class UndergroundController {
                 if (Rand.chance(helper.rewardRetention)) {
                     // Helper keeps the reward
                     helper.retainItem(item, amount);
-                }
-                else {
+                } else {
                     if (helper.autoSell && helper.autoSell()) {
                         UndergroundController.sellMineItem(item, amount);
-                    }
-                    else {
+                    } else {
                         UndergroundController.gainMineItem(item.id, amount);
                     }
                 }

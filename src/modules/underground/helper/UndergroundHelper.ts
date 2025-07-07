@@ -25,7 +25,7 @@ import { UndergroundController } from '../UndergroundController';
 import Rand from '../../utilities/Rand';
 import UndergroundTool from '../tools/UndergroundTool';
 import UndergroundItem from '../UndergroundItem';
-import {BOMB_DESTROY_CHANCE_BASE, BOMB_DESTROY_CHANCE_DECREASE_PER_LEVEL} from '../../GameConstants'
+import { BOMB_DESTROY_CHANCE_BASE, BOMB_DESTROY_CHANCE_DECREASE_PER_LEVEL } from '../../GameConstants';
 
 type UndergroundHelperParams = {
     id: string,
@@ -285,10 +285,7 @@ export class UndergroundHelper {
     }
 
     public get bombDestroyChance(): number {
-        return Math.max(
-            0,
-            BOMB_DESTROY_CHANCE_BASE - BOMB_DESTROY_CHANCE_DECREASE_PER_LEVEL * this.level
-        );
+        return Math.max(0, BOMB_DESTROY_CHANCE_BASE - BOMB_DESTROY_CHANCE_DECREASE_PER_LEVEL * this.level);
     }
 
     public toJSON(): Record<string, any> {
