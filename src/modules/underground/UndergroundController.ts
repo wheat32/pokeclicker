@@ -241,7 +241,13 @@ export class UndergroundController {
             GameHelper.incrementObservable(App.game.statistics.undergroundItemsFound, amount);
             GameHelper.incrementObservable(App.game.statistics.undergroundSpecificItemsFound[item.id], amount);
 
-            if (Rand.chance(App.game.underground.tools.getTool(toolType)?.itemDestroyChance ?? 0)) {
+            let destroyChance = App.game.underground.tools.getTool(toolType)?.itemDestroyChance ?? 0;
+
+            if (helper && toolType === UndergroundToolType.Bomb) {
+                destroyChance = Math.max(0, helper.bombDestroyChance);
+            }
+
+            if (Rand.chance(destroyChance)) {
                 UndergroundController.notifyItemDestroyed(item, amount, helper);
                 return;
             }

@@ -8,6 +8,7 @@ The purpose of this fork is to enhance the base version. It will be kept up-to-d
 ## List of Changes
 - You can automatically sell dug up items in the Underground.
 - Experts in the Underground can automatically sell dug up items.
+- Experts in the Underground have a decreasing chance to destroy exposed items using a bomb.
 
 Try the original at https://www.pokeclicker.com/
 

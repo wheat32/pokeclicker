@@ -466,6 +466,10 @@
                                         <td class="text-center tight" data-bind="text: $data.rewardRetention.toLocaleString('en-US', { style: 'percent', minimumFractionDigits: 1, maximumFractionDigits: 1 })"></td>
                                     </tr>
                                     <tr>
+                                        <td>Bomb destroy chance</td>
+                                        <td class="text-center align-middle tight" data-bind="text: (100 * bombDestroyChance).toFixed(0) + '%'"></td>
+                                    </tr>
+                                    <tr>
                                         <td class="text-left">Work cycle</td>
                                         <td class="text-center tight" data-bind="text: `${$data.workCycleTime.toLocaleString('en-US', { minimumFractionDigits: 1, maximumFractionDigits: 1 })}s`"></td>
                                     </tr>
@@ -800,6 +804,10 @@
                                             The chance starts at <knockout data-bind="text: GameConstants.REWARD_RETENTION_BASE.toLocaleString('en-US', { style: 'percent', maximumFractionDigits: 2 })"></knockout> and decreases by <knockout data-bind="text: GameConstants.REWARD_RETENTION_DECREASE_PER_LEVEL.toLocaleString('en-US', { style: 'percent', maximumFractionDigits: 2 })"></knockout> per level, down to <knockout data-bind="text: GameConstants.REWARD_RETENTION_MINIMUM.toLocaleString('en-US', { style: 'percent', maximumFractionDigits: 2 })"></knockout>.
                                         </li>
                                     </ul>
+                                </li>
+                                <li>
+                                    <strong>Bomb destroy chance:</strong>
+                                    When an expert uses a bomb, the chance that an exposed item will be destroyed starts at <knockout data-bind="text: GameConstants.BOMB_DESTROY_CHANCE_BASE.toLocaleString('en-US', { style: 'percent', maximumFractionDigits: 2 })"></knockout> and decreases by <knockout data-bind="text: GameConstants.BOMB_DESTROY_CHANCE_DECREASE_PER_LEVEL.toLocaleString('en-US', { style: 'percent', maximumFractionDigits: 2 })"></knockout> for each expert level (minimum 0%). Higher level experts are less likely to destroy treasures with bombs.
                                 </li>
                                 <li>
                                     <strong>Work cycle:</strong> Starts at <knockout data-bind="text: GameConstants.WORKCYCLE_TIMEOUT_BASE"></knockout> seconds and decreases by <knockout data-bind="text: GameConstants.WORKCYCLE_TIMEOUT_DECREASE_PER_LEVEL"></knockout> second for every level, up to a minimum of <knockout data-bind="text: GameConstants.WORKCYCLE_TIMEOUT_MINIMUM"></knockout> seconds per action.
