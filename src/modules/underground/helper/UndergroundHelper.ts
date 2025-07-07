@@ -65,6 +65,8 @@ export class UndergroundHelper {
         600: ko.observable(0),
     };
 
+    public autoSell: KnockoutObservable<boolean> = ko.observable(false);
+
     constructor(options: UndergroundHelperParams) {
         const {
             id,

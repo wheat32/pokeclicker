@@ -165,6 +165,7 @@ Settings.add(new Setting<string>('undergroundTreasureDisplayGrouping', 'Grouping
     ],
     'type'));
 Settings.add(new BooleanSetting('undergroundTreasureDisplayShowLocked', 'Show locked items', false));
+Settings.add(new BooleanSetting('undergroundTreasureAutoSellItems', 'Auto-Sell Dug Up Items', false));
 Settings.add(new Setting<string>('undergroundTreasureViewMode', 'Underground Treasure View Mode',
     [
         new SettingOption('List', 'list-view'),

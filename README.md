@@ -17,7 +17,6 @@ A game about catching Pokémon, defeating gym leaders, and watching numbers get 
 
 ## Guidelines
 - Make sure the build script is a success. We won't test Pull Requests that fail the building script.
-- We won't accept balance Pull Requests, unless it's from a developer or Code Contributor (Discord roles).
 - Pull Requests adding new translatable content should link to a Pull Request in the [translation repo](https://github.com/pokeclicker/pokeclicker-translations) adding your new strings. See the Developer instructions on that repo for more info.
 - Split Pull Requests into smaller Pull Requests when possible. It will make it easier for us to review, and easier for you if something's needs to be changed or is rejected.
 

@@ -252,14 +252,25 @@ export class UndergroundController {
                 if (Rand.chance(helper.rewardRetention)) {
                     // Helper keeps the reward
                     helper.retainItem(item, amount);
-                } else {
-                    UndergroundController.gainMineItem(item.id, amount);
+                }
+                else {
+                    if (helper.autoSell && helper.autoSell()) {
+                        UndergroundController.sellMineItem(item, amount);
+                    }
+                    else {
+                        UndergroundController.gainMineItem(item.id, amount);
+                    }
                 }
 
                 UndergroundController.addHiredHelperUndergroundExp(UNDERGROUND_EXPERIENCE_DIG_UP_ITEM, true);
             } else {
                 UndergroundController.gainMineItem(item.id, amount);
                 UndergroundController.addPlayerUndergroundExp(UNDERGROUND_EXPERIENCE_DIG_UP_ITEM, true);
+
+                // Auto-sell logic for manual digs
+                if (Settings.getSetting('undergroundTreasureAutoSellItems').observableValue()) {
+                    UndergroundController.sellMineItem(item, amount);
+                }
             }
         });
 
