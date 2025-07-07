@@ -2,10 +2,13 @@
   "name": "pokeclicker",
   "version": "0.10.24-1",
   "description": "PokéClicker Platinum repository",
-  "main": "index.js",
+  "main": "main.mjs",
   "scripts": {
     "start": "cross-env NODE_ENV=development gulp",
+    "start:electron": "npm run build && electron .",
+    "start:electron_linux": "npm run build && cross-env ELECTRON_OZONE_PLATFORM_HINT=auto electron .",
     "build": "cross-env NODE_ENV=development gulp build",
+    "build:electron_linux": "electron-builder --linux AppImage",
     "test": "npm-run-all --continue-on-error test-scripts eslint stylelint",
     "test-scripts": "gulp scripts && npm run vitest-nocoverage",
     "vitest": "vitest --run",
@@ -35,6 +38,25 @@
     "url": "https://github.com/wheat32/pokeclicker/issues"
   },
   "homepage": "https://github.com/wheat32/pokeclicker#readme",
+  "build": {
+    "appId": "com.pokeclicker.app",
+    "productName": "PokeClicker",
+    "files": [
+      "build/**/*",
+      "main.mjs",
+      "package.json",
+      "src/assets/images/Pokeball.png"
+    ],
+    "directories": {
+      "buildResources": "assets",
+      "output": "release"
+    },
+    "linux": {
+      "target": "AppImage",
+      "category": "Game",
+      "icon": "src/assets/images/Pokeball.png"
+    }
+  },
   "devDependencies": {
     "@babel/core": "^7.0.0",
     "@babel/preset-env": "^7.0.0",
@@ -52,6 +74,8 @@
     "browser-sync": "^3.0.2",
     "cross-env": "^7.0.2",
     "del": "^5.1.0",
+    "electron": "^37.2.0",
+    "electron-builder": "^26.0.12",
     "es6-promise": "^4.2.8",
     "eslint": "^7.32.0",
     "eslint-config-airbnb-typescript": "^17.0.0",
