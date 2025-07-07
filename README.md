@@ -1,5 +1,5 @@
-[![GitHub package.json version (branch)](https://img.shields.io/github/package-json/v/pokeclicker/pokeclicker/develop?label=dev%20version)](https://github.com/pokeclicker/pokeclicker/tree/develop)<br/>
-[![GitHub package.json version (branch)](https://img.shields.io/github/package-json/v/pokeclicker/pokeclicker/master?label=live%20version)](https://www.pokeclicker.com/)<br/>
+[![GitHub package.json version (branch)](https://img.shields.io/github/package-json/v/wheat32/pokeclicker/develop?label=dev%20version)](https://github.com/wheat32/pokeclicker/tree/develop)<br/>
+[![GitHub package.json version (branch)](https://img.shields.io/github/package-json/v/wheat32/pokeclicker/master?label=live%20version)](https://www.pokeclickerplatinum.com/)<br/>
 
 # Fork Purpose
 
