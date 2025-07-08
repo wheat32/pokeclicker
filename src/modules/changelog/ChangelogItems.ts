@@ -14,7 +14,8 @@ const ChangelogItems = [
     new ChangelogUpdate('v0.10.24-1', new Date(2025, 6, 7)),
     new Changelog(changelogType.NEW, 'Underground: Added auto-sell option for dug up items'),
     new Changelog(changelogType.NEW, 'Underground: Added auto-sell option for dug up items by experts'),
-    new Changelog(changelogType.CHANGE, 'Underground: Added bomb destroy chance for experts using bombs'),
+    new Changelog(changelogType.CHANGE, 'Underground: Added bomb destroy chance for experts using bombs. This decreases as their level increases'),
+    new Changelog(changelogType.CHANGE, 'Underground: Added bomb destroy chance for you (the player) using bombs. This decreases as your level increases'),
 
     // v0.10.24
     new ChangelogUpdate('v0.10.24', new Date(2025, 6, 4)),
