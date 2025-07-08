@@ -43,3 +43,16 @@ jobs:
         with:
           name: pokeclicker-windows-portable
           path: release/*.exe
+
+      - name: Create GitHub Release and Upload Artifacts (only on master)
+        if: github.ref == 'refs/heads/master'
+        env:
+          GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
+        run: |
+          TAG_NAME="v$(jq -r .version package.json)"
+          RELEASE_NAME="PokeClicker Platinum $TAG_NAME"
+
+          gh release view "$TAG_NAME" || gh release create "$TAG_NAME" \
+            release/*.AppImage release/*.exe \
+            --title "$RELEASE_NAME" \
+            --notes "Automated release of PokeClicker Platinum $TAG_NAME"
