@@ -27,7 +27,7 @@ import {
     UNDERGROUND_EXPERIENCE_DIG_UP_ITEM,
     PLAYER_BOMB_DESTROY_CHANCE_BASE,
     PLAYER_BOMB_DESTROY_CHANCE_MINIMUM,
-    PLAYER_BOMB_DESTROY_CHANCE_DECREASE_PER_LEVEL
+    PLAYER_BOMB_DESTROY_CHANCE_DECREASE_PER_LEVEL,
 } from '../GameConstants';
 import { UndergroundHelper } from './helper/UndergroundHelper';
 import NotificationOption from '../notifications/NotificationOption';
@@ -248,7 +248,7 @@ export class UndergroundController {
 
             if (helper && toolType === UndergroundToolType.Bomb) {
                 destroyChance = Math.max(0, helper.bombDestroyChance);
-            } else if(toolType === UndergroundToolType.Bomb) {
+            } else if (toolType === UndergroundToolType.Bomb) {
                 destroyChance = UndergroundController.bombDestroyChance();
             }
 
@@ -314,7 +314,7 @@ export class UndergroundController {
 
     private static bombDestroyChance(): number {
         const destroyChance =  Math.max(PLAYER_BOMB_DESTROY_CHANCE_MINIMUM, PLAYER_BOMB_DESTROY_CHANCE_BASE - PLAYER_BOMB_DESTROY_CHANCE_DECREASE_PER_LEVEL * App.game.underground.undergroundLevel);
-        console.log(destroyChance, App.game.underground.undergroundLevel);
+        // console.log(destroyChance, App.game.underground.undergroundLevel);
         return destroyChance;
     }
 
