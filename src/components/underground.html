@@ -213,6 +213,13 @@
                                                 </tr>
                                                 <!-- /ko -->
 
+                                                <!-- ko if: tool.id === UndergroundToolType.Bomb -->
+                                                <tr>
+                                                    <td class="text-left">Destroy chance</td>
+                                                    <td class="text-left tight"><code data-bind="text: UndergroundController.bombDestroyChance().toLocaleString('en-US', { style: 'percent', minimumFractionDigits: 0, maximumFractionDigits: 2 })"></code></td>
+                                                </tr>
+                                                <!-- /ko -->
+
                                                 <tr>
                                                     <td class="text-left">Lifetime usage</td>
                                                     <td class="text-left tight"><code data-bind="text: App.game.statistics.undergroundToolsUsed[tool.id]().toLocaleString('en-US')"></code></td>
@@ -807,7 +814,7 @@
                                 </li>
                                 <li>
                                     <strong>Bomb destroy chance:</strong>
-                                    When an expert uses a bomb, the chance that the mined item will be destroyed starts at <knockout data-bind="text: GameConstants.BOMB_DESTROY_CHANCE_BASE.toLocaleString('en-US', { style: 'percent', maximumFractionDigits: 2 })"></knockout> and decreases by <knockout data-bind="text: GameConstants.BOMB_DESTROY_CHANCE_DECREASE_PER_LEVEL.toLocaleString('en-US', { style: 'percent', maximumFractionDigits: 2 })"></knockout> for each expert level (minimum 0%). Higher level experts are less likely to destroy treasures with bombs.
+                                    When an expert uses a bomb and uncovers an item, the chance that the mined item will be destroyed starts at <knockout data-bind="text: GameConstants.HELPER_BOMB_DESTROY_CHANCE_BASE.toLocaleString('en-US', { style: 'percent', maximumFractionDigits: 2 })"></knockout> and decreases by <knockout data-bind="text: GameConstants.HELPER_BOMB_DESTROY_CHANCE_DECREASE_PER_LEVEL.toLocaleString('en-US', { style: 'percent', maximumFractionDigits: 2 })"></knockout> for each expert level to a minimum of <knockout data-bind="text: GameConstants.HELPER_BOMB_DESTROY_CHANCE_MINIMUM.toLocaleString('en-US', { style: 'percent', maximumFractionDigits: 2 })"></knockout>. Higher level experts are less likely to destroy treasures with bombs.
                                 </li>
                                 <li>
                                     <strong>Work cycle:</strong> Starts at <knockout data-bind="text: GameConstants.WORKCYCLE_TIMEOUT_BASE"></knockout> seconds and decreases by <knockout data-bind="text: GameConstants.WORKCYCLE_TIMEOUT_DECREASE_PER_LEVEL"></knockout> second for every level, up to a minimum of <knockout data-bind="text: GameConstants.WORKCYCLE_TIMEOUT_MINIMUM"></knockout> seconds per action.
