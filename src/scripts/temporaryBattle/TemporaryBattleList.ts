@@ -3816,7 +3816,7 @@ TemporaryBattleList['Anomaly Mewtwo 2'] = new TemporaryBattle(
 TemporaryBattleList['Anomaly Mewtwo 3'] = new TemporaryBattle(
     'Anomaly Mewtwo 3',
     [new GymPokemon('Mega Mewtwo Y', 520000000, 70)],
-    '<i>Damn it! How could you possibly pursue me so quickly!</i>',
+    '<i>No way! How could you possibly pursue me so quickly!</i>',
     [new QuestLineStepCompletedRequirement('An Unrivaled Power', 10)],
     undefined,
     {

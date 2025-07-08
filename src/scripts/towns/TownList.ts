@@ -325,7 +325,7 @@ const CeruleanFarmApprentice = new NPC('Farm Apprentice', [
 ], {image: 'assets/images/npcs/Bug Catcher.png'});
 
 const CeruleanSuperNerd = new NPC('Super Nerd Jovan', [
-    'In my spare time I like to play this kickass browser game. It takes ages to get all the best stuff.',
+    'In my spare time I like to play this awesome browser game. It takes ages to get all the best stuff.',
     'Then one day, all my progress was gone. I don\'t know exactly what happened. Something updated, some cookies got cleaned up, I don\'t know. I had to start all over from the beginning.',
     'That day I learned that I should frequently download a save.',
 ], {image: 'assets/images/npcs/Super Nerd.png'});
@@ -690,7 +690,7 @@ const PinkanOfficerJenny3 = new NPC ('Officer Jenny', [
 });
 const ThemeparkTeamRocket1 = new NPC('Jessie & James', [
     'Oh hello there trainer! What do you mean we\'re not supposed to be here? We toootally got permission from Officer Jenny!',
-    'Isn\'t your whole "thing" being helpful? We want to build a theme park to help fund the Pinkan Reserve, but this meddlesome twerp named Ash keeps getting in the way. He\'s even electrocuted us with his damn Pikachu!',
+    'Isn\'t your whole "thing" being helpful? We want to build a theme park to help fund the Pinkan Reserve, but this meddlesome twerp named Ash keeps getting in the way. He even electrocuted us with his blasted Pikachu!',
     'We need a bunch of Pinkan Berries to help feed the Pokémon at our theme park, but the twerp keeps zapping us when we try to go collect them.',
     'Would you mind farming some Pinkan Berries to help us grow our supply? We don\'t know how to, but we\'ve heard the Berry Master in Kanto could be helpful?',
 ], {
@@ -4464,7 +4464,7 @@ const HappinyWitness8 = new NPC('Bug Catcher', [
 });
 
 const HappinyWitness9 = new NPC('Go-Rock Pincher', [
-    'Damn, that Happiny got away. Just when I had it cornered, a Pichu and a Glameow came out and attacked me.',
+    'Blast it, that Happiny got away. Just when I had it cornered, a Pichu and a Glameow came out and attacked me.',
     '...Hey, I recognize you! You pinched the egg we pinched in Eterna Forest!',
     'I\'m gonna pinch that Pokémon first, so if you want to try and stop me, you\'ll have to get through my Pokémon!',
 ], {

@@ -6,16 +6,17 @@ A game about catching Pokémon, defeating gym leaders, and watching numbers get 
 
 # Fork Purpose
 
-The purpose of this fork is to enhance the base version. It will be kept up-to-date with the base repository as much as possible.
+The purpose of this fork is to enhance the base version of PokéClicker with features and adjustments that better align with the spirit of an _idle game_. While the upstream project labels itself as an idle game, some recent design choices have moved away from that core philosophy.
 
-Upstream may take code from this fork if it is useful to the base game.
+This fork aims to stay true to idle-friendly mechanics while remaining as up-to-date with the upstream repository as reasonably possible.<br />
+If upstream finds any of these changes valuable, they're welcome to incorporate them into the main project.
 
-## List of Changes
+## Notable Changes
 - You can automatically sell dug up items in the Underground.
 - Experts in the Underground can automatically sell dug up items.
-- Experts in the Underground have a decreasing chance to destroy exposed items using a bomb.
+- The player and experts in the Underground have a decreasing chance to destroy exposed items using a bomb as you/they level up.
 
-Try Platinum at https://www.pokeclickerplatinum.com/  
+Try Platinum at https://www.pokeclickerplatinum.com/ <br />
 Try the original at https://www.pokeclicker.com/
 
 > [!NOTE]

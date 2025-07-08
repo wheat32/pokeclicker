@@ -113,8 +113,7 @@ export default class UndergroundTool {
         const baseRatePerSecond = 0.001;
         const finalRatePerSecond = 0.18;
 
-        /*console.log(`Calculating restore rate for tool ${this.displayName} at level ${level}. Base: ${baseRatePerSecond}, Final: ${finalRatePerSecond}, Min: ${minimumLevel}, Max: ${maximumLevel}, Delta: ${deltaLevel}`);
-        console.log(`Calculated restore rate: ${(2 ** (Math.max(level - minimumLevel, 0) / deltaLevel) ** 10 - 1) * (finalRatePerSecond - baseRatePerSecond) + baseRatePerSecond}`);*/
+        // console.log(`Calculated restore rate: ${(2 ** (Math.max(level - minimumLevel, 0) / deltaLevel) ** 10 - 1) * (finalRatePerSecond - baseRatePerSecond) + baseRatePerSecond}`);*/
 
         return (2 ** (Math.max(level - minimumLevel, 0) / deltaLevel) ** 10 - 1) * (finalRatePerSecond - baseRatePerSecond) + baseRatePerSecond;
     }
