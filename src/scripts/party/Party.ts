@@ -169,7 +169,7 @@ class Party implements Feature, TmpPartyType {
         includeTempBonuses = true,
         subregion: GameConstants.SubRegions = player.subregion
     ): number {
-        let attackPerSecond = this.calculatePokemonAttackPerSecond(type1, type2, ignoreRegionMultiplier, region, includeBreeding, useBaseAttack, overrideWeather, ignoreLevel, includeTempBonuses, subregion);
+        const attackPerSecond = this.calculatePokemonAttackPerSecond(type1, type2, ignoreRegionMultiplier, region, includeBreeding, useBaseAttack, overrideWeather, ignoreLevel, includeTempBonuses, subregion);
         return Math.round(attackPerSecond / GameConstants.BATTLE_TICKS_PER_SECOND);
     }
 
