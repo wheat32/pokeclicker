@@ -169,6 +169,22 @@ class Party implements Feature, TmpPartyType {
         includeTempBonuses = true,
         subregion: GameConstants.SubRegions = player.subregion
     ): number {
+        const attackPerSecond = this.calculatePokemonAttackPerSecond(type1, type2, ignoreRegionMultiplier, region, includeBreeding, useBaseAttack, overrideWeather, ignoreLevel, includeTempBonuses, subregion);
+        return Math.round(attackPerSecond / GameConstants.BATTLE_TICKS_PER_SECOND);
+    }
+
+    public calculatePokemonAttackPerSecond(
+        type1: PokemonType = PokemonType.None,
+        type2: PokemonType = PokemonType.None,
+        ignoreRegionMultiplier = false,
+        region: GameConstants.Region = player.region,
+        includeBreeding = false,
+        useBaseAttack = false,
+        overrideWeather?: WeatherType,
+        ignoreLevel = false,
+        includeTempBonuses = true,
+        subregion: GameConstants.SubRegions = player.subregion
+    ): number {
         let attack = 0;
         const pokemon = this.partyPokemonActiveInSubRegion(region, subregion);
         const ignoreRegionMultiplierOrMKJ = ignoreRegionMultiplier || region == GameConstants.Region.alola && subregion == GameConstants.AlolaSubRegions.MagikarpJump;
@@ -178,7 +194,7 @@ class Party implements Feature, TmpPartyType {
         }
 
         const bonus = this.multiplier.getBonus('pokemonAttack');
-        return Math.round(attack * bonus);
+        return attack * bonus;
     }
 
     public calculateOnePokemonAttack(
@@ -275,7 +291,7 @@ class Party implements Feature, TmpPartyType {
     }
 
     public pokemonAttackObservable: KnockoutComputed<number> = ko.pureComputed(() => {
-        return App.game.party.calculatePokemonAttack();
+        return Math.round(this.calculatePokemonAttackPerSecond());
     }).extend({rateLimit: 1000});
 
     public getPokemon(id: number): PartyPokemon | undefined {

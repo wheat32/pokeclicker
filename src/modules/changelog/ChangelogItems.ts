@@ -10,6 +10,10 @@ import ChangelogUpdate from './ChangelogUpdate';
  */
 const ChangelogItems = [
     // note that month is 0 indexed
+    // v0.10.24-2
+    new ChangelogUpdate('v0.10.24-2', new Date(2025, 6, 16)),
+    new Changelog(changelogType.CHANGE, 'Battle: Damage is now applied three times per second instead of once per second. Damage dealt has been adjusted accordingly to equal the same amount of damage per second.'),
+
     // v0.10.24-1
     new ChangelogUpdate('v0.10.24-1', new Date(2025, 6, 7)),
     new Changelog(changelogType.NEW, 'Underground: Added auto-sell option for dug up items'),

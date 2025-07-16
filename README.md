@@ -15,6 +15,7 @@ If upstream finds any of these changes valuable, they're welcome to incorporate 
 - You can automatically sell dug up items in the Underground.
 - Experts in the Underground can automatically sell dug up items.
 - The player and experts in the Underground have a decreasing chance to destroy exposed items using a bomb as you/they level up.
+- Battles are faster as damage is now applied three times per second instead of once per second. Damage dealt has been adjusted so damage per second remains the same.
 
 Try Platinum at https://www.pokeclickerplatinum.com/ <br />
 Try the original at https://www.pokeclicker.com/
