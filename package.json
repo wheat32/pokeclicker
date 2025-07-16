@@ -3,7 +3,6 @@
   "version": "0.10.24-1",
   "description": "PokéClicker Platinum repository",
   "main": "main.mjs",
-  "scripts": {
     "start": "cross-env NODE_ENV=development gulp",
     "start:electron": "npm run build && electron .",
     "start:electron_linux": "npm run build && cross-env ELECTRON_OZONE_PLATFORM_HINT=auto electron .",
