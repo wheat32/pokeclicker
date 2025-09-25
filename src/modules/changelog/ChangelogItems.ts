@@ -10,6 +10,10 @@ import ChangelogUpdate from './ChangelogUpdate';
  */
 const ChangelogItems = [
     // note that month is 0 indexed
+    // v0.10.24-3
+    new ChangelogUpdate('v0.10.25-3', new Date(2025, 6, 16)),
+    new Changelog(changelogType.CHANGE, 'Underground: Slightly buffed the bomb\'s recovery time.'),
+
     // v0.10.25
     new ChangelogUpdate('v0.10.25', new Date(2025, 7, 13)),
     new Changelog(changelogType.NEW, 'New Pokémon'),
