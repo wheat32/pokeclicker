@@ -58,17 +58,19 @@ export default class UndergroundTools {
                 id: UndergroundToolType.Bomb,
                 displayName: 'Bomb',
                 description: 'Mines a maximum of 2 layers on each of 10 random tiles (including fully mined tiles). The number of tiles increases when equipped with the Explosive Charge Oak Item. Items mined with the Bomb tool will have a chance of getting destroyed in the process. You will not receive XP for destroyed items. The higher your level, the lower the chances of destroying a mined item with a bomb.',
-                durabilityPerUse: 0.18,
+                durabilityPerUse: 0.16,
                 customRestoreRateFn: (tool, level) => {
                     const baseRatePerSecond = 0.0009;  // Starting at 0.0009 per second
-                    const finalRatePerSecond = 0.018;   // Maximum of 0.018 per second
-                    const maximumLevel = 35;
+                    const finalRatePerSecond = 0.025;   // Maximum of 0.025 per second
+                    const maximumLevel = 40;
 
                     // Calculate exponential growth
-                    const growthFactor = Math.exp(level / maximumLevel);  // Exponential factor based on level
-                    const rate = baseRatePerSecond + (finalRatePerSecond - baseRatePerSecond) * (growthFactor - 1) / (Math.exp(1) - 1);  // Scale the growth to fit the desired range
+                    const intensity = 1.88;  // Change the growth curve
+                    const growthFactor = Math.exp((level / maximumLevel) * intensity);  // Exponential factor based on level
+                    const normalizedGrowth = (growthFactor - 1) / (Math.exp(intensity) - 1);
+                    const rate = baseRatePerSecond + (finalRatePerSecond - baseRatePerSecond) * normalizedGrowth;
 
-                    // Scale from 0.09% per second to 1.8% per second
+                    // Scale from 0.09% per second to 2.5% per second
                     return rate;
                 },
                 action: () => {
