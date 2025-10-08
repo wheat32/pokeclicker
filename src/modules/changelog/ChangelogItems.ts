@@ -13,8 +13,8 @@ const ChangelogItems = [
     // v0.10.24-4
     new ChangelogUpdate('v0.10.25-4', new Date(2025, 9, 8)),
     new Changelog(changelogType.NEW, 'Electron app now remembers its window position, size, and state across sessions'),
-    new Changelog(changelogType.CHANGE, "Underground: Reduced bomb durability usage (0.18 → 0.16) for improved efficiency."),
-    new Changelog(changelogType.CHANGE, "Underground: Reworked bomb recovery curve — now scales to a higher maximum rate (2.5%/s) with stronger late-level growth."),
+    new Changelog(changelogType.CHANGE, 'Underground: Reduced bomb durability usage (0.18 → 0.16) for improved efficiency.'),
+    new Changelog(changelogType.CHANGE, 'Underground: Reworked bomb recovery curve — now scales to a higher maximum rate (2.5%/s) with stronger late-level growth.'),
 
     // v0.10.24-3
     new ChangelogUpdate('v0.10.25-3', new Date(2025, 8, 25)),
