@@ -10,6 +10,10 @@ import ChangelogUpdate from './ChangelogUpdate';
  */
 const ChangelogItems = [
     // note that month is 0 indexed
+    // v0.10.25-5
+    new ChangelogUpdate('v0.10.25-5', new Date(2025, 9, 31)),
+    new Changelog(changelogType.FIXED, 'Electron: Fixed crash when restoring the window after minimizing.'),
+
     // v0.10.24-4
     new ChangelogUpdate('v0.10.25-4', new Date(2025, 9, 8)),
     new Changelog(changelogType.NEW, 'Electron app now remembers its window position, size, and state across sessions'),

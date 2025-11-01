@@ -8,6 +8,7 @@
     "start:electron": "npm run build && electron .",
     "start:electron_linux": "npm run build && cross-env ELECTRON_OZONE_PLATFORM_HINT=auto electron .",
     "build": "cross-env NODE_ENV=development gulp build",
+    "debug:electron": "npm run build && cross-env NODE_ENV=development ELECTRON_ENABLE_LOGGING=true ELECTRON_ENABLE_STACK_DUMPING=true electron --inspect=9229 .",
     "build:electron_linux": "electron-builder --linux AppImage",
     "build:electron_windows": "electron-builder --win portable",
     "test": "npm-run-all --continue-on-error test-scripts eslint stylelint",
