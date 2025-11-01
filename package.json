@@ -1,6 +1,6 @@
 {
   "name": "pokeclicker",
-  "version": "0.10.25-4",
+  "version": "0.10.25-5",
   "description": "PokéClicker Platinum repository",
   "main": "main.mjs",
   "scripts": {
