@@ -103,17 +103,6 @@ function createWindow() {
     win.on('resize', updateLastUnminimized);
     win.on('move', updateLastUnminimized);
     win.on('moved', updateLastUnminimized); // For Wayland (Electron 36+)
-    win.on('restore', () => {
-        if (lastUnminimized.width && lastUnminimized.height) {
-            win.setSize(lastUnminimized.width, lastUnminimized.height);
-            if (
-                typeof lastUnminimized.x === 'number' &&
-                typeof lastUnminimized.y === 'number'
-            ) {
-                win.setPosition(lastUnminimized.x, lastUnminimized.y);
-            }
-        }
-    });
 
     win.on('close', () => saveState(win));
     win.loadFile(path.join(__dirname, 'build/index.html'));
